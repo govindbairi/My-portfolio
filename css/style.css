@@ -322,7 +322,7 @@ margin-left: 100px;
 .home-hero
  {
   
-  background: url(./assets/png/bgimg2.png);
+  background: url(./bgimg2.png);
   background-position: center;
   height: 100vh;
   min-height: 80rem;
@@ -593,7 +593,7 @@ margin-left: 100px;
 
 .project-cs-hero {
   color: #fff;
-  background: url(./assets/png/bgimg2.png);
+  background: url(./bgimg2.png);
   width: 150%;
   height: auto;
   background-size: cover;
