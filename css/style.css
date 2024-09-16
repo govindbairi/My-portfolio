@@ -534,7 +534,7 @@ margin-left: 100px;
       .contact__form-field {
         margin-bottom: 3rem; } }
   .contact__form-label {
-    color: #666;
+    color: #000000;
     font-size: 1.4rem;
     letter-spacing: 1px;
     font-weight: 700;
@@ -542,7 +542,7 @@ margin-left: 100px;
     display: block;
     text-align: left; }
   .contact__form-input {
-    color: #333;
+    color: #0a0909;
     padding: 2rem;
     width: 100%;
     border: 1px solid #ebebeb;
