@@ -512,7 +512,7 @@ margin-left: 100px;
           font-size: 1.7rem; } }
 
 .contact {
-  background: url(../../assets/png/contactbg.jpg); 
+  background: url('contactbg.jpg'); 
   background-size: cover;
   background-position: center; }
   .contact__form-container {
