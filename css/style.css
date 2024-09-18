@@ -328,6 +328,7 @@ margin-left: 100px;
   min-height: 80rem;
   max-height: 120rem;
   position: relative; 
+   display:flex;
 }
 .home-hero {
   position: relative;
