@@ -598,7 +598,9 @@ margin-left: 100px;
   height: auto;
   background-size: cover;
   background-position: center;
-  position: relative; }
+  position: relative;
+  display:flex;
+}
   @media only screen and (max-width: 37.5em) {
     .project-cs-hero {
       height: unset;
