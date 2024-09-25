@@ -319,17 +319,18 @@ margin-left: 100px;
 .d-none {
   display: none; }
 
-.home-hero
- {
-  
-  background: url('bgimg2.png');
-  background-position: center;
-  height: 100vh;
-  min-height: 80rem;
-  max-height: 120rem;
-  position: relative; 
-   display:flex;
+  .home-hero {
+    background: url('bgimg2.png') no-repeat center center;
+    background-size: cover; /* or 'contain' */
+    height: 100vh;
+    min-height: 80rem;
+    max-height: 120rem;
+    position: relative; 
+    display: flex;
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
 }
+
 .home-hero {
   position: relative;
   background-color: #3498db;
@@ -369,6 +370,7 @@ margin-left: 100px;
         border: 2px solid #eee;
         border-left: 2px solid #eee;
         transform: translateY(-50%);
+        left: 20px;
     }
     @media only screen and (max-width: 60em) {
         .home-hero__socials {
@@ -388,6 +390,7 @@ margin-left: 100px;
     }
     .home-hero__social {
         width: 6rem;
+        display: flex;
     }
     .home-hero__social-icon-link {
         width: 100%;
@@ -395,16 +398,20 @@ margin-left: 100px;
         padding: 1.2rem;
         border-bottom: 5px solid #eee;
         transition: background .3s;
+        display: flex;
     }
     .home-hero__social-icon-link:hover {
       background: rgba(0, 0, 0, 0.1);
       transform: scale(1.1);
+      display: flex;
   }
     .home-hero__social-icon-link--bd-none {
         border-bottom: 3px;
+        display: flex;
     }
     .home-hero__social-icon {
         width: 100%;
+        display: flex;
     }
     .home-hero__content {
         position: absolute;
@@ -597,10 +604,14 @@ margin-left: 100px;
   background: url('bgimg2.png');
   width: 150%;
   height: auto;
+  min-height: 80rem;
+  max-height: 120rem;
   background-size: cover;
   background-position: center;
-  position: relative;
-  display:flex;
+  align-items: center; /* Center content vertically */
+  justify-content: center;
+  position: relative; 
+  display: flex;
 }
   @media only screen and (max-width: 37.5em) {
     .project-cs-hero {
