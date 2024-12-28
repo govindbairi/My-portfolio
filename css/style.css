@@ -64,8 +64,8 @@ textarea {
 
 .heading-primary {
   font-size: 6rem;
-  color: #fff200; /* White text */
-  -webkit-text-stroke: .5px rgb(255, 255, 255); /* Black stroke */
+  color: #fff200; 
+  -webkit-text-stroke: .5px rgb(255, 255, 255);
   text-shadow: 0 0 10px white;
   margin-right: 200px;
   margin-top: -15px;
@@ -312,47 +312,50 @@ margin-left: 100px;
       }
       .para {
         color: white;
-        font-size: 2rem; /* Keep the original font size for desktop */
-        margin-left: 90px; /* Keep the larger left margin for desktop */
-        margin-bottom: -20px; /* Retain the original bottom margin */
+        font-size: 2rem; 
+        margin-left: 90px;
+        margin-bottom: -20px; 
     }
-.d-none {
-  display: none; }
-
-  .home-hero {
-    background: url('bgimg2.png') no-repeat center center;
-    background-size: cover; 
-    height: 100vh;
-    min-height: 80rem;
-    max-height: 120rem;
-    position: relative;
-    display: flex;
-    align-items: center; 
-    justify-content: center; 
-}
-
-
-@media (max-width: 768px) {
-    .home-hero {
-        height: 60vh; 
-        min-height: 40rem;
-        background-size: cover; 
-        padding: 1rem; 
+    .d-none {
+      display: none;
     }
-}
-
-@media (min-width: 769px) and (max-width: 1200px) {
+    
     .home-hero {
-        height: 80vh; 
+      background: url('bgimg2.webp') no-repeat center center;
+      background-size: cover;
+      height: 100vh;
+      min-height: 80rem;
+      max-height: 120rem;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    @media (max-width: 768px) {
+      .home-hero {
+        height: 60vh;
+        min-height: auto;
+        max-height: none; 
+        background-size: contain; 
+        background-position: top center; 
+        padding: 1rem;
+      }
+    }
+    
+    
+    @media (min-width: 769px) and (max-width: 1200px) {
+      .home-hero {
+        height: 80vh;
         min-height: 60rem;
-        max-height: 100rem; 
+        max-height: 100rem;
+      }
     }
-}
-
+    
 
 .home-hero {
   position: relative;
-  background-color: #3498db;
+  background-color: #000000;
   overflow: hidden;
   border-radius: 15px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
@@ -618,53 +621,76 @@ margin-left: 100px;
       .contact__btn {
         width: 100%; } }
 
-.project-cs-hero {
-  color: #fff;
-  background: url('bgimg2.png');
-  width: 150%;
-  height: auto;
-  min-height: 80rem;
-  max-height: 120rem;
-  background-size: cover;
-  background-position: center;
-  align-items: center; /* Center content vertically */
-  justify-content: center;
-  position: relative; 
-  display: flex;
-}
-  @media only screen and (max-width: 37.5em) {
-    .project-cs-hero {
-      height: unset;
-      min-height: unset; } }
-  .project-cs-hero__content {
-    padding: 25rem 0 17rem 0;
-    max-width: 90rem;
-    width: 92%;
-    margin: auto; }
-    @media only screen and (max-width: 37.5em) {
-      .project-cs-hero__content {
-        padding: 19rem 0 13rem 0;
-        margin: auto;
-        position: static;
-        transform: translate(0, 0); } }
-  .project-cs-hero__info {
-    margin: 3rem auto 0 auto;
-    max-width: 80rem; }
-  .project-cs-hero__cta {
-    margin-top: 5rem;
-    text-align: center; }
-
-.project-details__content {
-  padding: 8rem 0;
-  max-width: 90rem;
-  margin: auto; }
-  .project-details__content-title {
-    font-weight: 700;
-    font-size: 2.8rem;
-    margin-bottom: 3rem; }
-    @media only screen and (max-width: 37.5em) {
-      .project-details__content-title {
-        font-size: 2.4rem; } }
+        .project-cs-hero {
+          color: #fff;
+          background: url('bgimg2.webp') no-repeat center center;
+          width: 100%; /* Set width to 100% to avoid overflow */
+          height: auto;
+          min-height: 80rem;
+          max-height: 120rem;
+          background-size: cover;
+          background-position: center;
+          align-items: center; /* Center content vertically */
+          justify-content: center;
+          position: relative;
+          display: flex;
+        }
+        
+        @media only screen and (max-width: 37.5em) {
+          .project-cs-hero {
+            width: 100%; /* Ensure no horizontal scrolling */
+            height: auto; /* Allow height to adapt */
+            min-height: auto; /* Remove conflicting min-height */
+            max-height: none; /* Remove max-height restriction */
+            background-size: contain; /* Ensure the full image fits on mobile */
+            background-position: top center; /* Adjust alignment for better visibility */
+          }
+        }
+        
+        .project-cs-hero__content {
+          padding: 25rem 0 17rem 0;
+          max-width: 90rem;
+          width: 92%;
+          margin: auto;
+        }
+        
+        @media only screen and (max-width: 37.5em) {
+          .project-cs-hero__content {
+            padding: 19rem 0 13rem 0;
+            margin: auto;
+            position: static;
+            transform: translate(0, 0); /* Ensure no unnecessary transforms */
+          }
+        }
+        
+        .project-cs-hero__info {
+          margin: 3rem auto 0 auto;
+          max-width: 80rem;
+        }
+        
+        .project-cs-hero__cta {
+          margin-top: 5rem;
+          text-align: center;
+        }
+        
+        .project-details__content {
+          padding: 8rem 0;
+          max-width: 90rem;
+          margin: auto;
+        }
+        
+        .project-details__content-title {
+          font-weight: 700;
+          font-size: 2.8rem;
+          margin-bottom: 3rem;
+        }
+        
+        @media only screen and (max-width: 37.5em) {
+          .project-details__content-title {
+            font-size: 2.4rem;
+          }
+        }
+        
 
 .project-details__showcase-img-cont {
   width: 100%;
@@ -778,7 +804,7 @@ margin-left: 100px;
     font-weight: 700;
     transition: color .3s; }
     .header__link:hover {
-      color: #0062b9; }
+      color: #000000; }
     @media only screen and (max-width: 56.25em) {
       .header__link {
         padding: 3rem 1.8rem;
