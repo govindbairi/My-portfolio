@@ -15,6 +15,12 @@
       href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
       rel="stylesheet"
     />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function() {
+        emailjs.init("9fyCjxWfefn_qnS4N"); // Your actual public key
+      })();
+    </script>
   </head>
   <body>
     <header class="header">
@@ -187,7 +193,7 @@
           <span class="heading-sec__main">About Me</span>
           <span class="heading-sec__sub">
             Hello, I'm Govind Bairi, a third-year Computer Science student at GVP College 
-            and a Fullstack Developer . I’ve engaged in remote projects for various agencies, 
+            and a Fullstack Developer . I've engaged in remote projects for various agencies, 
             provided consulting for startups, and worked with AWS Cloud and Google AI/ML technologies. 
            
 
@@ -204,7 +210,7 @@
                 and I'm a <strong> Fullstack Developer </strong> located in
                Vizag. 
                 
-                I’ve engaged in <strong> remote projects</strong>  for various agencies,
+                I've engaged in <strong> remote projects</strong>  for various agencies,
                  provided consulting for startups, and worked with AWS Cloud 
                  and Google AI/ML technologies, collaborating with diverse teams 
                  to drive innovative solutions.
@@ -383,11 +389,11 @@
           <span class="heading-sec__main heading-sec__main--lt">Contact</span>
           <span class="heading-sec__sub heading-sec__sub--lt">
             You can contact me directly at 9491496815 or simply fill the beow form.<br>
-             I’d be more than happy to discuss how we can work together to achieve your goals.
+             I'd be more than happy to discuss how we can work together to achieve your goals.
           </span>
         </h2>
         <div class="contact__form-container">
-          <form action="#" class="contact__form">
+          <form class="contact__form" id="contact-form">
             <div class="contact__form-field">
               <label class="contact__form-label" for="name">Name</label>
               <input
@@ -395,7 +401,7 @@
                 placeholder="Enter Your Name"
                 type="text"
                 class="contact__form-input"
-                name="name"
+                name="from_name"
                 id="name"
               />
             </div>
@@ -404,9 +410,9 @@
               <input
                 required
                 placeholder="Enter Your Email"
-                type="text"
+                type="email"
                 class="contact__form-input"
-                name="email"
+                name="reply_to"
                 id="email"
               />
             </div>
@@ -478,8 +484,8 @@
             <h4 class="heading heading-sm text-lt">Govindbairi</h4>
             <p class="main-footer__short-desc">
               Thank you so much for visiting! Your time and interest mean a lot to me. <br>
-              If you have any questions feedback, or just want to chat, please don’t <br>hesitate to reach out.
-               I’m here to help and would love to hear from you!
+              If you have any questions feedback, or just want to chat, please don't <br>hesitate to reach out.
+               I'm here to help and would love to hear from you!
             </p>
           </div>
         </div>
