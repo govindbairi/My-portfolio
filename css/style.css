@@ -371,7 +371,7 @@ margin-left: 100px;
 
   @media only screen and (max-width: 37.5em) {
     .home-hero {
-      height: 76vh;
+      height: 86vh;
       min-height: unset;
       background-position: center 80px;
       background-size: 300px;
