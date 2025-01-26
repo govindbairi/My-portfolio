@@ -1,17 +1,4 @@
-/*
-0 - 600px:      Phone
-600 - 900px:    Tablet portrait
-900 - 1200px:   Tablet landscape
-[1200 - 1800] is where our normal styles apply
-1800px + :      Big desktop
-$breakpoint arguement choices:
-- phone
-- tab-port
-- tab-land
-- big-desktop
 
-Inside media queries 1em is always 16px i.e 1em = 16px at every screen size only inside media queries
-*/
 *,
 *::after,
 *::before {
@@ -231,14 +218,14 @@ textarea {
 
   #Certications {
     padding: 20px;
-    text-align: center; /* Center the content within the section */
+    text-align: center; 
   }
   
   .gallery {
     display: flex;
-    justify-content: center; /* Center items horizontally */
-    flex-wrap: wrap; /* Allow items to wrap onto new lines */
-    gap: -5px; /* Space between gallery items */
+    justify-content: center; 
+    flex-wrap: wrap; 
+    gap: -5px; 
   }
   
   .gallery-item {
@@ -384,86 +371,157 @@ margin-left: 100px;
 
   @media only screen and (max-width: 37.5em) {
     .home-hero {
-      height: unset;
-      min-height: unset; } }
-      .home-hero__socials {
-        position: absolute;
-        top: 50%;
-        border: 2px solid #eee;
-        border-left: 2px solid #eee;
-        transform: translateY(-50%);
-        left: 20px;
-    }
-    @media only screen and (max-width: 60em) {
-        .home-hero__socials {
-            display: none;
-        }
-    }
-    .home-hero__mouse-scroll-cont {
-        position: absolute;
-        bottom: 3%;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-    @media only screen and (max-width: 37.5em) {
-        .home-hero__mouse-scroll-cont {
-            display: none;
-        }
-    }
-    .home-hero__social {
-        width: 6rem;
-        display: flex;
-    }
-    .home-hero__social-icon-link {
-        width: 100%;
-        display: block;
-        padding: 1.2rem;
-        border-bottom: 5px solid #eee;
-        transition: background .3s;
-        display: flex;
-    }
-    .home-hero__social-icon-link:hover {
-      background: rgba(0, 0, 0, 0.1);
-      transform: scale(1.1);
+      height: 66vh;
+      min-height: unset;
+      background-position: center 80px;
+      background-size: 300px;
+      padding: 2rem;
       display: flex;
-  }
-    .home-hero__social-icon-link--bd-none {
-        border-bottom: 3px;
-        display: flex;
+      align-items: flex-start;
+      justify-content: center;
     }
-    .home-hero__social-icon {
-        width: 100%;
-        display: flex;
-    }
+
     .home-hero__content {
-        position: absolute;
-        top: 50%;
-        left: 35%;
-        transform: translate(-50%, -50%);
-        max-width: 90rem;
-        width: 90%;
+      position: relative;
+      top: -118px;
+      left: 0;
+      transform: none;
+      width: 100%;
+      padding: 0 2rem;
+      margin-top: 320px;
+      z-index: 2;
     }
-    @media only screen and (max-width: 40.5em) {
-        .home-hero__content {
-            padding: 19rem 0 13rem 0;
-            margin: auto;
-            position: static;
-            transform: translate(0, 0);
-        }
+
+    .heading-primary {
+      font-size: 3.5rem;
+      margin: 0.5rem 0;
+      text-align: center;
+      margin-right: 0;
     }
-    .home-hero__info {
-        margin: 3rem auto 0 auto;
-        max-width: 80rem;
+
+    .text-primary {
+      font-size: 1.8rem;
+      margin: 0.5rem 0;
+      text-align: center;
+      margin-left: 0;
     }
+
+    .text-primarys {
+      font-size: 2.5rem;
+      margin: 1rem 0;
+      text-align: center;
+      margin-left: 0;
+    }
+
+    .para {
+      font-size: 1.6rem;
+      margin: 1.5rem auto;
+      text-align: center;
+      max-width: 90%;
+    }
+
     .home-hero__cta {
-        margin-top: 5rem;
-        text-align: center;
+      margin: 2rem 0;
+      text-align: center;
     }
-    
-    /* Custom styles for LeetCode and GeeksforGeeks */
-    
-    
-    
+
+    /* Mobile social icons */
+    .home-hero__socials {
+      position: fixed;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: row;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 0.8rem 1.5rem;
+      border-radius: 50px;
+      width: auto;
+      gap: 1rem;
+      z-index: 100;
+    }
+
+    .home-hero__social {
+      width: 3rem;
+      margin: 0;
+    }
+
+    .home-hero__social-icon-link {
+      padding: 0.5rem;
+      border: none;
+    }
+
+    .home-hero__social-icon {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  /* Desktop styles for social icons */
+  @media only screen and (min-width: 37.5em) {
+    .home-hero__socials {
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      z-index: 100;
+    }
+
+    .home-hero__social {
+      width: 45px;
+      height: 45px;
+      background: rgba(0, 0, 0, 0.7);
+      border-radius: 5px;
+      transition: all 0.3s;
+    }
+
+    .home-hero__social:hover {
+      transform: scale(1.1);
+      background: rgba(0, 0, 0, 0.9);
+    }
+
+    .home-hero__social-icon-link {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.8rem;
+      border: none;
+    }
+
+    .home-hero__social-icon {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .home-hero__content {
+      position: absolute;
+      top: 50%;
+      left: 35%;
+      transform: translate(-50%, -50%);
+      max-width: 90rem;
+      width: 90%;
+    }
+
+    .home-hero__cta {
+      margin-top: 4rem;
+      text-align: left;
+      margin-left: 100px;
+    }
+
+    .para {
+      margin-bottom: 2rem;
+    }
+
+    .text-primarys {
+      margin-bottom: 2rem;
+    }
+  }
 
 .about {
   background: #fafafa; }
@@ -572,7 +630,7 @@ margin-left: 100px;
     display: block;
     text-align: left; }
   .contact__form-input {
-    color: #0a0909;
+    color: #333;
     padding: 2rem;
     width: 100%;
     border: 1px solid #ebebeb;
@@ -581,38 +639,47 @@ margin-left: 100px;
     background: #f0f0f0;
     border-radius: 5px;
     font-weight: 600;
-    /* Code for Modern Browsers */
-    /* Code for WebKit, Blink, Edge */
-    /* Code for Internet Explorer 10-11 */
-    /* Code for Microsoft Edge */
-    /* Code for Mozilla Firefox 4 to 18 */
-    /* Code for Mozilla Firefox 19+ */ }
-    .contact__form-input::placeholder {
-      color: #999;
-      font-weight: 600;
-      font-size: 1.6rem; }
-    .contact__form-input::-webkit-input-placeholder {
-      color: #999;
-      font-weight: 600;
-      font-size: 1.6rem; }
-    .contact__form-input:-ms-input-placeholder {
-      color: #999;
-      font-weight: 600;
-      font-size: 1.6rem; }
-    .contact__form-input::-ms-input-placeholder {
-      color: #999;
-      font-weight: 600;
-      font-size: 1.6rem; }
-    .contact__form-input:-moz-placeholder {
-      opacity: 1;
-      color: #999;
-      font-weight: 600;
-      font-size: 1.6rem; }
-    .contact__form-input::-moz-placeholder {
-      opacity: 1;
-      color: #999;
-      font-weight: 600;
-      font-size: 1.6rem; }
+    cursor: text;
+    pointer-events: auto;
+    caret-color: #333;
+  }
+  .contact__form-input::placeholder {
+    color: #999;
+    font-weight: 400;
+    font-size: 1.6rem;
+  }
+  .contact__form-input:focus {
+    outline: none;
+    border: 1px solid #0062b9;
+    background: #fff;
+  }
+  .contact__form-input::-webkit-input-placeholder {
+    color: #999;
+    font-weight: 600;
+    font-size: 1.6rem;
+  }
+  .contact__form-input:-ms-input-placeholder {
+    color: #999;
+    font-weight: 600;
+    font-size: 1.6rem;
+  }
+  .contact__form-input::-ms-input-placeholder {
+    color: #999;
+    font-weight: 600;
+    font-size: 1.6rem;
+  }
+  .contact__form-input:-moz-placeholder {
+    opacity: 1;
+    color: #999;
+    font-weight: 600;
+    font-size: 1.6rem;
+  }
+  .contact__form-input::-moz-placeholder {
+    opacity: 1;
+    color: #999;
+    font-weight: 600;
+    font-size: 1.6rem;
+  }
   .contact__btn {
     width: 30%;
     padding: 2rem 4rem;
@@ -952,3 +1019,78 @@ margin-left: 100px;
   to {
     opacity: 0;
     top: 27px; } }
+
+.contact__form-input.error {
+  border-color: #ff3333;
+}
+
+.contact__form-input.success {
+  border-color: #4CAF50;
+}
+
+.contact__btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Loading state */
+.contact__btn.loading {
+  position: relative;
+  color: transparent;
+}
+
+.contact__btn.loading::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* Style for the textarea */
+textarea.contact__form-input {
+  height: auto;
+  min-height: 200px;
+  resize: vertical;
+}
+
+/* Style for the form fields container */
+.contact__form-field {
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+/* Style for labels */
+.contact__form-label {
+  color: #666;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  display: block;
+  text-align: left;
+}
+
+/* Mobile styles */
+@media only screen and (max-width: 37.5em) {
+  .contact__form-input {
+    padding: 1.5rem;
+    font-size: 1.5rem;
+  }
+
+  .contact__form-label {
+    font-size: 1.3rem;
+  }
+}
