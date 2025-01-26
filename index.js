@@ -1,34 +1,36 @@
-// Frontend JavaScript code
+
 const contactForm = document.querySelector('.contact__form');
 
 if (contactForm) {
-  contactForm.addEventListener('submit', async (event) => {
-    event.preventDefault(); // Prevent the default form submission
-
-    const formData = new FormData(contactForm);
-    const data = {};
-    formData.forEach((value, key) => {
-      data[key] = value;
-    });
-
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    const originalBtnText = submitBtn.textContent;
+    submitBtn.classList.add('loading');
+    submitBtn.disabled = true;
+    
     try {
-      const response = await fetch('http://localhost:3000/submit', { // Adjust URL as needed
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      });
+      const result = await emailjs.sendForm(
+        'service_1w8zytj',
+        'template_1d3pnxo',
+        contactForm,
+        '9fyCjxWfefn_qnS4N'  
+      );
 
-      if (response.ok) {
-        alert('Thank you for contacting us!');
-        contactForm.reset(); // Optionally reset the form
+      if(result.text === 'OK') {
+        contactForm.reset();
+        alert('Thank you for your message! I will get back to you soon.');
       } else {
-        alert('There was a problem with your submission.');
+        throw new Error('Failed to send message');
       }
     } catch (error) {
       console.error('Error:', error);
-      alert('There was an error. Please try again.');
+      alert('Oops! There was a problem submitting your form. Please email me directly at govindbairi142@gmail.com');
+    } finally {
+      submitBtn.classList.remove('loading');
+      submitBtn.disabled = false;
+      submitBtn.textContent = originalBtnText;
     }
   });
 }
